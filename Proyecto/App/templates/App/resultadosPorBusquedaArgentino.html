@@ -1,0 +1,20 @@
+{% extends "app/inicio.html" %}
+{% load static %}
+{% block contenidoQueCambia %}
+
+
+  <p>Estamos buscado el argentino con DNI: {{dni}}</p>
+
+  {% if argentinos %}
+  
+  <ul>
+      {% for a in argentinos %}
+            <li> {{a.nombre}} </li>
+            <li> {{a.apellido}} </li>
+            <li> {{a.dni}} </li>
+      {% endfor %}
+  </ul>
+
+  {% endif %}
+
+{% endblock %}

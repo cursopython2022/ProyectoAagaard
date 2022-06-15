@@ -1,0 +1,19 @@
+{% extends "app/inicio.html" %}
+{% load static %}
+{% block contenidoQueCambia %}
+
+<p>Estamos buscando el nacionalizado con DNI: {{dni}}</p>
+
+{% if nacionalizados %}
+
+<ul>
+    {% for a in nacionalizados %}
+          <li> {{a.nombre}} </li>
+          <li> {{a.apellido}} </li>
+          <li> {{a.dni}} </li>
+    {% endfor %}
+</ul>  
+
+  {% endif %}
+
+{% endblock %}
